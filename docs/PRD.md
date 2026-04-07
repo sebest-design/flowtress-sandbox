@@ -1,127 +1,59 @@
-# Product Requirements Document (PRD): Foundinity
+# Product Requirements Document (PRD): Flowtress
 
-**Cofounder Matchmaking Platform**
+**Disruptive Branding & Web Design for Regulated Industries**
 
 ---
 
 ## 1. Overview
 
-Foundinity is a cofounder matchmaking platform designed to help entrepreneurs form **high-alignment founding teams**.
+Flowtress is a high-end branding and web design agency platform that specializes in conveying value propositions for companies operating in **highly regulated industries**.
 
 ### Problems Addressed
 
-- Existing cofounder platforms rely on shallow profiles and skill-only matching
-- Users struggle to assess compatibility around commitment, values, and ways of working
-- Matches often stall in passive text conversations without leading to real collaboration
+- **The "Stale" Factor:** Companies in FinTech, Healthcare, and M&A often have outdated, "safe" designs that fail to excite or communicate modern capability.
+- **Trust Deficit:** A lack of modern trust signals (performance metrics, clear outcomes, high-quality UI) makes them look untrustworthy to modern stakeholders.
+- **Complexity Obfuscation:** Value propositions are often buried in jargon instead of being visualized clearly.
 
 ### Solution
 
-Foundinity uses an **alignment-first matchmaking approach**, matching users based on:
+Flowtress provides a **modern and disruptive** digital presence that uses:
 
-- Skills and expertise
-- Commitment and vision
-- Working styles
-- Values
-- Personality
-
-To encourage real interaction and momentum:
-
-- Messaging is limited
-- Matches expire after a fixed time window
-- Users are nudged toward video calls
-
-The platform prioritizes **clarity, action, and real connection** over browsing and chatting.
+- **Outcome-Driven Storytelling:** Lead with the win. Show exactly what was achieved before explaining how.
+- **High-Performance UI:** Using cutting-edge tech (React, Framer Motion) to signal competence and modernity.
+- **Direct Communication:** Reducing friction between the agency and prospective high-ticket clients.
 
 ---
 
-## 2. Target Users
+## 2. Target Industries
 
-### Primary User: Entrepreneur / Aspiring Cofounder
+Flowtress specifically targets:
 
-Foundinity supports:
-
-- First-time founders
-- Technical and non-technical professionals
-- Students and recent graduates
-- Experienced entrepreneurs
-
-User differentiation happens through onboarding inputs, not predefined personas.
-
-### Core User Need
-
-> Find a cofounder who aligns with how I work, what I value, and what I want to build — not just what skills I have.
+- **FinTech & Healthcare:** Where trust and modernity are paramount.
+- **M&A & Accounting Services:** Where professional clarity meets high-stakes outcomes.
+- **AI Startups:** Where looking "ahead of the curve" is a requirement.
 
 ---
 
 ## 3. Functional Requirements
 
-### Registration & Authentication
+### Outcome-Driven Portfolio (Public)
 
-- FR-01: Users can sign up and log in via Clerk (email, Google, GitHub OAuth)
-- FR-02: Users must be 18+ (date of birth validation during onboarding)
-- FR-03: Users can log out and delete their account
+- **FR-01: Outcome Hooks:** Every case study MUST lead with a bold outcome metric (e.g., "150% Increase in User Trust").
+- **FR-02: Visual Storytelling:** Case studies follow a strict "Outcome -> Problem -> Solution" (Achieved X using Z leading to Y) visual flow.
+- **FR-03: Hardcoded Performance:** Projects are hardcoded into the codebase to ensure pixel-perfect design control and sub-second load times.
 
-### Onboarding Flow
+### Direct Contact Hub
 
-- FR-04: Onboarding is structured, linear, and required before matching
-- FR-05: Step 1 — Age & Location: date of birth (18+ validation), city-level location from static city list
-- FR-06: Step 2 — Skills & Expertise: select skills from predefined categories, indicate primary strengths
-- FR-07: Step 3 — Commitment & Vision: commitment level (part-time, full-time, flexible), startup intent and ambition
-- FR-08: Step 4 — Working Styles: remote/hybrid/in-person preference, collaboration and communication style
-- FR-09: Step 5 — Values: select core personal and work values
-- FR-10: Step 6 — Personality: structured personality traits (scales)
-- FR-11: Step 7 — Avatar Creation: avatar selection using boring-avatars library
-
-### Profile
-
-- FR-12: After onboarding, users can enrich their profile with free-form content
-- FR-13: Profile fields: short introduction, founder pitch/idea summary (optional), background and experience, additional notes
-- FR-14: Users can edit their profile and onboarding responses at any time
-
-### Matching
-
-- FR-15: System generates matches using weighted scoring across all onboarding dimensions
-- FR-16: Matches are presented one at a time with alignment summary
-- FR-17: Users can accept or pass on a match
-- FR-18: Mutual acceptance creates a connection
-
-### Match Expiry
-
-- FR-19: Matches expire after a fixed time window (e.g., 7 days) if not acted upon
-- FR-20: Expired matches are removed and users are notified
-
-### Messaging
-
-- FR-21: Connected users can exchange a limited number of messages
-- FR-22: Message limit encourages users to move to video calls
-- FR-23: Users receive notifications for new messages
-
-### Video Call Nudge
-
-- FR-24: After messaging begins, users are nudged to schedule a video call via Cal.com link
-- FR-25: Cal.com link is displayed within the match conversation view
-
-### Email Notifications
-
-- FR-26: Transactional emails sent via Resend (welcome, new match, match expiry, new message)
-- FR-27: Users can manage email notification preferences
-
-### Analytics
-
-- FR-28: PostHog integration tracks key user events (signup, onboarding completion, match actions, messages sent)
-- FR-29: Analytics dashboard accessible to admins
+- **FR-04: Multi-Channel Outreach:** A dedicated contact page providing direct means for prospects to reach out via SMS and Email.
+- **FR-05: Manual High-Touch:** The system facilitates direct 1-to-1 communication, avoiding automated chatbot "slop."
 
 ---
 
 ## 4. Non-Functional Requirements
 
-- **NFR-01: Performance** — Pages load in under 2 seconds on 3G connections; real-time updates via Convex subscriptions
-- **NFR-02: Mobile-first** — All screens designed mobile-first with responsive breakpoints for tablet and desktop
-- **NFR-03: Accessibility** — WCAG 2.1 AA compliance; keyboard navigation; screen reader support
-- **NFR-04: Security** — Authentication via Clerk; all data transmitted over HTTPS; Convex handles server-side authorization
-- **NFR-05: Scalability** — Convex handles scaling automatically; no self-managed infrastructure
-- **NFR-06: Reliability** — 99.9% uptime target leveraging Vercel and Convex managed infrastructure
-- **NFR-07: Privacy** — User data stored only in Convex; no third-party data sharing beyond stated integrations
+- **NFR-01: Modern Aesthetic:** Dark mode by default, glassmorphism, and intentional motion to signal a "disruptive" identity.
+- **NFR-02: Performance:** Sub-1s page loads to demonstrate technical excellence to AI and FinTech clients.
+- **NFR-03: Trust Signals:** High-density, well-organized bento grids to imply stability despite the disruptive vibe.
 
 ---
 
@@ -129,40 +61,20 @@ User differentiation happens through onboarding inputs, not predefined personas.
 
 ### In Scope (MVP)
 
-- User registration and Clerk authentication
-- Full onboarding flow (7 steps)
-- Profile creation and editing
-- Avatar generation via boring-avatars
-- Weighted matching algorithm
-- Match display, accept/pass, and expiry
-- Limited messaging between matched users
-- Cal.com video call nudge (link only, no SDK)
-- Email notifications via Resend
-- Analytics via PostHog
+- Outcome-driven project showcase (Public).
+- Direct contact page (SMS/Email details).
+- Modern/Disruptive UI framework (Tailwind + Framer Motion).
+- Basic analytics (PostHog).
 
 ### Out of Scope (MVP)
 
-- Native mobile apps (iOS/Android)
-- In-app video calling
-- AI-powered matching (ML models)
-- Payment or subscription features
-- Admin dashboard UI
-- Social media profile imports
-- Team matching (3+ cofounders)
-- Startup idea marketplace / bulletin board
-- Chat features beyond basic messaging (reactions, threads, file sharing)
-- Google Places API for location (using static city list instead)
+- **Client Portals:** No private login areas for clients.
+- **CMS:** No administrative interface for adding projects; all content is code-driven.
+- **Automated CRM:** No complex lead-scoring or automated sequences; focus on manual, high-quality interaction.
 
 ---
 
-## 6. Success Metrics
+## 6. Guiding Philosophies
 
-| Metric | Target |
-|---|---|
-| Onboarding completion rate | > 70% of signups |
-| Match acceptance rate | > 30% of presented matches |
-| Message-to-call conversion | > 15% of messaging connections schedule a call |
-| Weekly active users (WAU) | Tracked via PostHog |
-| User retention (30-day) | > 40% |
-| Average onboarding time | < 10 minutes |
-| Match quality rating | User satisfaction survey post-match (future) |
+- **No-Slop Design:** Adhering to high-quality, high-standards code and design principles (Referencing the "stop-slop" philosophy for future documentation refinements).
+- **Clarity Over Jargon:** Every piece of copy must serve the "Problem -> Solution -> Outcome" narrative.

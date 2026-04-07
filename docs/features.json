@@ -1,188 +1,48 @@
 {
   "features": [
     {
-      "id": "F001",
-      "name": "User Registration + Clerk Auth",
-      "description": "Users can sign up and log in via Clerk with email, Google, and GitHub OAuth. Session management and logout included.",
+      "id": "FLW-001",
+      "name": "Outcome-Driven Project Showcase",
+      "description": "Hardcoded bento-grid portfolio displaying case studies for regulated industries with a clear 'Outcome -> Problem -> Solution' structure.",
       "priority": "high",
       "dependencies": [],
       "acceptance_criteria": [
-        "Users can sign up with email, Google, or GitHub",
-        "Users can log in and maintain a session",
-        "Users can log out",
-        "Clerk webhook syncs new users to Convex users table",
-        "Unauthenticated users are redirected to sign-in"
+        "Case studies lead with a bold outcome metric (the 'hook')",
+        "Each project includes distinct sections for Outcome, Problem, and Solution",
+        "Visual design uses modern, 'disruptive' elements (grids, glassmorphism)",
+        "Staggered entry animations using Framer Motion",
+        "Responsive layout optimized for high-end desktop and mobile devices"
       ],
       "passes": false,
-      "notes": ""
+      "notes": "No CMS; projects are statically defined in the codebase for maximum control."
     },
     {
-      "id": "F011",
-      "name": "Analytics Integration",
-      "description": "PostHog SDK integrated to track key user events across the application.",
-      "priority": "medium",
+      "id": "FLW-002",
+      "name": "Direct Contact Page",
+      "description": "Clean, high-conversion contact page with clear ways for prospects to initiate manual 1-to-1 SMS or Email outreach.",
+      "priority": "high",
       "dependencies": [],
       "acceptance_criteria": [
-        "PostHog JS SDK initialized on app load",
-        "Signup event tracked",
-        "Onboarding completion event tracked",
-        "Match accept/pass events tracked",
-        "Message sent events tracked"
+        "Contact options include SMS and Email with direct links (mailto:, tel: / sms:)",
+        "Modern, 'no-BS' UI focused on direct connection",
+        "Contact actions tracked via PostHog"
       ],
       "passes": false,
-      "notes": ""
+      "notes": "Facilitates personal, high-touch communication for agency lead-generation."
     },
     {
-      "id": "F002",
-      "name": "Onboarding Flow",
-      "description": "Seven-step structured onboarding collecting age, location, skills, commitment, working styles, values, and personality data.",
+      "id": "FLW-003",
+      "name": "Disruptive Brand Visuals",
+      "description": "High-end UI framework using Tailwind CSS and Framer Motion to convey a disruptive but stable image.",
       "priority": "high",
-      "dependencies": ["F001"],
+      "dependencies": [],
       "acceptance_criteria": [
-        "Onboarding is required before accessing the dashboard",
-        "Seven steps displayed sequentially with progress indicator",
-        "Step 1: Date of birth with 18+ validation and city selection from static list",
-        "Step 2: Skill selection from predefined categories",
-        "Step 3: Commitment level and startup intent selection",
-        "Step 4: Work style and communication preferences",
-        "Step 5: Core values selection",
-        "Step 6: Personality trait scales",
-        "Users can navigate back to previous steps",
-        "All responses saved to Convex onboarding_responses table"
+        "Dark mode default with premium glassmorphism effects",
+        "Intentional motion and transitions (e.g., counting up outcome numbers)",
+        "Strict typography (e.g., Inter or Geist) for technical trust"
       ],
       "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F003",
-      "name": "Profile Creation",
-      "description": "After onboarding, users can view and edit their profile with free-form fields including introduction, founder pitch, background, and additional notes.",
-      "priority": "high",
-      "dependencies": ["F002"],
-      "acceptance_criteria": [
-        "Profile page displays all onboarding data and free-form fields",
-        "Users can edit introduction, founder pitch, background, and notes",
-        "Users can update onboarding responses from profile",
-        "Profile data persisted to Convex profiles table",
-        "Profile is viewable by matched users"
-      ],
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F004",
-      "name": "Avatar Creation",
-      "description": "Users select and customize an avatar using the boring-avatars library during onboarding step 7.",
-      "priority": "medium",
-      "dependencies": ["F001"],
-      "acceptance_criteria": [
-        "Avatar displayed using boring-avatars React component",
-        "Users can choose from multiple avatar variants",
-        "Avatar seed and variant saved to user record",
-        "Avatar renders consistently across the app (profile, matches, messages)",
-        "No file upload or storage required"
-      ],
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F005",
-      "name": "Matching Algorithm",
-      "description": "Convex server function computes weighted compatibility scores across all onboarding dimensions and generates match pairs.",
-      "priority": "high",
-      "dependencies": ["F002"],
-      "acceptance_criteria": [
-        "Matching uses weighted scoring across skills, commitment, values, working style, and personality",
-        "Scores are normalized to a 0-100 scale",
-        "Score breakdown stored per match",
-        "Users are not re-matched with previously seen users",
-        "Matching runs when users complete onboarding and periodically"
-      ],
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F010",
-      "name": "Email Notifications",
-      "description": "Transactional emails sent via Resend for key events: welcome, new match, match expiry, and new messages.",
-      "priority": "high",
-      "dependencies": ["F001"],
-      "acceptance_criteria": [
-        "Welcome email sent on signup",
-        "New match notification email sent when a match is created",
-        "Match expiry reminder email sent before expiration",
-        "New message notification email sent for unread messages",
-        "Users can manage email notification preferences",
-        "Emails sent via Resend API from Convex actions"
-      ],
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F006",
-      "name": "Match Display",
-      "description": "Users see their current matches with alignment summaries and can accept or pass on each match.",
-      "priority": "high",
-      "dependencies": ["F005"],
-      "acceptance_criteria": [
-        "Dashboard shows current pending match with alignment summary",
-        "Score breakdown visible per matching dimension",
-        "Users can accept or pass on a match",
-        "Mutual acceptance creates a connection",
-        "Connected matches shown in a separate list",
-        "Match partner profile viewable from match card"
-      ],
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F007",
-      "name": "Match Expiry",
-      "description": "Matches expire after a fixed time window if not acted upon. Convex cron job handles expiration and notifications.",
-      "priority": "medium",
-      "dependencies": ["F005"],
-      "acceptance_criteria": [
-        "Matches have an expiry timestamp set on creation",
-        "Convex cron job runs periodically to expire stale matches",
-        "Expired matches are marked and removed from active view",
-        "Users are notified of expired matches via email",
-        "Expiry countdown visible on match card"
-      ],
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F008",
-      "name": "Limited Messaging",
-      "description": "Connected users can exchange a limited number of messages to encourage moving to video calls.",
-      "priority": "high",
-      "dependencies": ["F006"],
-      "acceptance_criteria": [
-        "Messaging available only for connected (mutually accepted) matches",
-        "Message count limit enforced per match",
-        "Real-time message delivery via Convex subscriptions",
-        "Message input disabled when limit is reached",
-        "Remaining message count displayed to users",
-        "New message notifications sent"
-      ],
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "F009",
-      "name": "Video Call Nudge",
-      "description": "After messaging begins, users are prompted to schedule a video call via a Cal.com link displayed in the conversation view.",
-      "priority": "low",
-      "dependencies": ["F006"],
-      "acceptance_criteria": [
-        "Cal.com scheduling link displayed in match conversation view",
-        "Nudge appears after first message exchange",
-        "Link opens Cal.com in a new tab",
-        "Nudge becomes more prominent as message limit approaches",
-        "No Cal.com SDK integration required"
-      ],
-      "passes": false,
-      "notes": ""
+      "notes": "Key differentiator from stale competitors in regulated spaces."
     }
   ]
 }
