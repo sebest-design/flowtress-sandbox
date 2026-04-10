@@ -43,6 +43,66 @@
       ],
       "passes": false,
       "notes": "Key differentiator from stale competitors in regulated spaces."
+    },
+    {
+      "id": "FLW-004",
+      "name": "Type-Safe Routing",
+      "description": "File-based or code-based routing with full TypeScript inference on route params, search params, and loader data via @tanstack/react-router.",
+      "priority": "high",
+      "dependencies": ["FLW-001", "FLW-002"],
+      "acceptance_criteria": [
+        "All routes defined with createRoute/createRootRoute and registered via RouterProvider",
+        "Route params and search params are fully type-safe (no runtime type assertions)",
+        "Navigation between portfolio pages and contact page works without full page reloads",
+        "Route type registration via 'declare module @tanstack/react-router' is in place"
+      ],
+      "passes": false,
+      "notes": "Enabled by @tanstack/react-router v1.168.10. Code-based routing for MVP; file-based routing available via @tanstack/router-plugin."
+    },
+    {
+      "id": "FLW-005",
+      "name": "Server State Caching",
+      "description": "Async data fetching with automatic caching, background refetching, and stale-while-revalidate via @tanstack/react-query.",
+      "priority": "medium",
+      "dependencies": [],
+      "acceptance_criteria": [
+        "QueryClient and QueryClientProvider wrap the application root",
+        "Data fetching uses useQuery with typed queryFn return values",
+        "Stale-while-revalidate strategy is configured for portfolio data",
+        "Loading and error states are handled in all data-dependent components"
+      ],
+      "passes": false,
+      "notes": "Enabled by @tanstack/react-query v5.97.0. Supports future API integrations beyond hardcoded data."
+    },
+    {
+      "id": "FLW-006",
+      "name": "Headless Data Tables",
+      "description": "Custom-styled, headless data tables for displaying structured portfolio metrics and case study data via @tanstack/react-table.",
+      "priority": "medium",
+      "dependencies": ["FLW-001", "FLW-003"],
+      "acceptance_criteria": [
+        "Tables use useReactTable with typed ColumnDef definitions",
+        "Sorting and filtering are available where appropriate",
+        "Table rendering matches the bento-grid premium aesthetic (no default component library styles)",
+        "Responsive table layouts for mobile and desktop"
+      ],
+      "passes": false,
+      "notes": "Enabled by @tanstack/react-table v8.21.3. Headless design ensures tables match the premium Flowtress visual identity."
+    },
+    {
+      "id": "FLW-007",
+      "name": "Type-Safe Contact Forms",
+      "description": "Form management with type-safe field validation and submission via @tanstack/react-form.",
+      "priority": "medium",
+      "dependencies": ["FLW-002"],
+      "acceptance_criteria": [
+        "Forms use useForm with fully typed defaultValues and onSubmit",
+        "Field-level validation with onChange/onBlur handlers",
+        "Form submission state (isSubmitting, canSubmit) is reflected in UI",
+        "TypeScript strict mode enabled (required by @tanstack/react-form)"
+      ],
+      "passes": false,
+      "notes": "Enabled by @tanstack/react-form v1.28.6. Requires TypeScript strict mode and v5.4+."
     }
   ]
 }

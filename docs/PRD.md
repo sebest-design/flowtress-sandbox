@@ -74,7 +74,35 @@ Flowtress specifically targets:
 
 ---
 
-## 6. Guiding Philosophies
+## 6. Technical Stack (Installed)
+
+The following stack has been installed, configured, and verified:
+
+| Category | Package | Version | Purpose |
+|----------|---------|---------|---------|
+| Runtime | Bun | 1.3.12 | JS/TS runtime + package manager |
+| Build | Vite | 8.0.8 | ESM dev server + Rollup production builds |
+| Types | TypeScript | 6.0.2 | Strict-mode type system (`noEmit`) |
+| UI | React | 19.2.5 | Component library (automatic JSX transform) |
+| UI | React DOM | 19.2.5 | DOM rendering |
+| Styling | Tailwind CSS | 4.2.2 | Utility-first CSS via Vite plugin |
+| Routing | @tanstack/react-router | 1.168.10 | Type-safe routing with param inference |
+| State | @tanstack/react-query | 5.97.0 | Async state with caching + stale-while-revalidate |
+| Tables | @tanstack/react-table | 8.21.3 | Headless table logic (sorting, filtering, pagination) |
+| Forms | @tanstack/react-form | 1.28.6 | Type-safe form state + field validation |
+
+### Build Pipeline
+`bun` → `vite dev` (development) / `vite build` (production) → `tsc --noEmit` (type verification)
+
+### Key Capabilities
+- **Sub-second builds**: Vite + esbuild transpilation, Bun package resolution
+- **Zero-config Tailwind**: v4 Vite plugin with automatic content detection and CSS-native `@theme` tokens
+- **End-to-end type safety**: Strict TypeScript across routing, data fetching, tables, and forms
+- **Headless UI**: TanStack suite provides logic without opinionated styles — full design control for the premium Flowtress aesthetic
+
+---
+
+## 7. Guiding Philosophies
 
 - **No-Slop Design:** Adhering to high-quality, high-standards code and design principles (Referencing the "stop-slop" philosophy for future documentation refinements).
 - **Clarity Over Jargon:** Every piece of copy must serve the "Problem -> Solution -> Outcome" narrative.

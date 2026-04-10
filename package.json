@@ -1,0 +1,27 @@
+{
+  "name": "flowtress-sandbox",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@tanstack/react-form": "^1.28.6",
+    "@tanstack/react-query": "^5.97.0",
+    "@tanstack/react-router": "^1.168.10",
+    "@tanstack/react-table": "^8.21.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.0.8"
+  }
+}
