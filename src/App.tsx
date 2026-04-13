@@ -1,6 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
+import { TypographyPreview } from '../docs/typography/typography';
+import { FontCombinationsMatrix } from '../docs/typography/combinations';
 
 // Setup React Query
 const queryClient = new QueryClient({
@@ -47,8 +49,22 @@ const indexRoute = createRoute({
   ),
 });
 
+// Typography Route
+const typographyRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/typography',
+  component: TypographyPreview,
+});
+
+// Combinations Route
+const combinationsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/typography/combinations',
+  component: FontCombinationsMatrix,
+});
+
 // Create Route Tree
-const routeTree = rootRoute.addChildren([indexRoute]);
+const routeTree = rootRoute.addChildren([indexRoute, typographyRoute, combinationsRoute]);
 
 // Create Router
 const router = createRouter({ routeTree });
