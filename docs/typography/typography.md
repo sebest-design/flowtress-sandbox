@@ -97,4 +97,3 @@ For all other elements, standard Tailwind CSS values are used.
 ```tsx
 <span className="text-xs font-semibold font-condensed uppercase tracking-wider text-zinc-500">SYSTEM STATUS</span>
 ```
-
