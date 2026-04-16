@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", "system-ui", "sans-serif";
+  --font-condensed: "Roboto Condensed", "sans-serif";
+  --font-serif: "Lora", "serif";
+
+  --color-primary: oklch(0.58 0.19 45); /* Copper-600 */
+  --color-accent: oklch(0.25 0.08 275);  /* Pulse-Indigo-900 */
+
+  /* Brand Copper - Optimized for 4.5:1 Contrast at 600 */
+  --color-copper-50: oklch(0.97 0.01 45);
+  --color-copper-100: oklch(0.92 0.03 45);
+  --color-copper-200: oklch(0.85 0.06 45);
+  --color-copper-300: oklch(0.78 0.10 45);
+  --color-copper-400: oklch(0.70 0.15 45);
+  --color-copper-500: oklch(0.63 0.18 45);
+  --color-copper-600: oklch(0.58 0.19 45);
+  --color-copper-700: oklch(0.50 0.17 45);
+  --color-copper-800: oklch(0.42 0.15 45);
+  --color-copper-900: oklch(0.35 0.12 45);
+  --color-copper-950: oklch(0.28 0.10 45);
+
+  /* Brand Pulse Indigo Anchor */
+  --color-pulse-50: oklch(0.95 0.01 275);
+  --color-pulse-100: oklch(0.91 0.02 275);
+  --color-pulse-200: oklch(0.82 0.05 275);
+  --color-pulse-300: oklch(0.73 0.08 275);
+  --color-pulse-400: oklch(0.62 0.10 275);
+  --color-pulse-500: oklch(0.51 0.11 275);
+  --color-pulse-600: oklch(0.42 0.10 275);
+  --color-pulse-700: oklch(0.35 0.09 275);
+  --color-pulse-800: oklch(0.29 0.08 275);
+  --color-pulse-900: oklch(0.25 0.08 275);
+  --color-pulse-950: oklch(0.18 0.06 275);
+
+  /* Corporate Slate Neutrals */
+  --color-slate-50: oklch(0.98 0.005 235);
+  --color-slate-100: oklch(0.96 0.01 235);
+  --color-slate-200: oklch(0.92 0.015 235);
+  --color-slate-300: oklch(0.87 0.02 235);
+  --color-slate-400: oklch(0.70 0.025 235);
+  --color-slate-500: oklch(0.55 0.03 235);
+  --color-slate-600: oklch(0.45 0.03 235);
+  --color-slate-700: oklch(0.35 0.03 235);
+  --color-slate-800: oklch(0.25 0.03 235);
+  --color-slate-900: oklch(0.15 0.03 235);
+  --color-slate-950: oklch(0.10 0.03 235);
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white selection:bg-primary/30;
+  }
+}
+
+/* Glassmorphism utility classes */
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-hover {
+    @apply hover:bg-white/10 transition-colors duration-300;
+  }
+}
