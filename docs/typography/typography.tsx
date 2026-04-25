@@ -93,19 +93,20 @@ export function TypographyPreview() {
 
         <div className="pb-8 border-t border-pulse-800 pt-6">
           <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-pulse-400 block mb-3">Select Typeface</span>
-          <div className="flex gap-2 items-center">
+          <div className="flex flex-wrap gap-2 items-center">
             {fonts.map((f) => (
               <button
                 key={f.id}
                 onClick={() => setActiveTab(f)}
                 aria-pressed={activeTab.id === f.id}
-                className={`px-4 py-2 rounded text-sm font-bold transition-all relative group ${
+                className={`px-3 sm:px-4 py-2 rounded text-sm font-bold transition-all relative group ${
                   activeTab.id === f.id
                     ? "bg-white text-pulse-950"
                     : "bg-pulse-900 text-pulse-400 hover:bg-pulse-800 hover:text-white border border-pulse-800"
                 }`}
               >
-                {f.name}
+                <span className="sm:hidden">{f.name.split(' ')[0]}</span>
+                <span className="hidden sm:inline">{f.name}</span>
                 <span className="absolute -top-2 -right-2 bg-copper-500 text-white text-[8px] px-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   {f.role}
                 </span>
@@ -114,13 +115,13 @@ export function TypographyPreview() {
                 )}
               </button>
             ))}
-            <span className="ml-auto text-[9px] font-mono text-pulse-700">{width}px viewport</span>
+            <span className="hidden sm:inline ml-auto text-[9px] font-mono text-pulse-700">{width}px viewport</span>
           </div>
         </div>
       </header>
 
       <main className="px-4 sm:px-8 py-16">
-        <div className="grid grid-cols-1 gap-24">
+        <div className="grid grid-cols-1 gap-12 sm:gap-24">
           {/* Responsive Headings Weight Matrix */}
           <section>
             <h2 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-8 pb-2 border-b border-slate-100 flex justify-between">
@@ -136,10 +137,10 @@ export function TypographyPreview() {
                   <div className="grid grid-cols-1 gap-8">
                     {weights.map((w) => (
                       <div key={w.label} className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
-                        <div className="min-w-[120px] text-[9px] text-slate-400 uppercase font-bold">
+                        <div className="w-20 sm:w-[120px] shrink-0 text-[9px] text-slate-400 uppercase font-bold">
                           {w.label}
                         </div>
-                        <div className={`${h.classes} ${w.class} ${activeTab.class} leading-tight text-pulse-950`}>
+                        <div className={`min-w-0 ${h.classes} ${w.class} ${activeTab.class} leading-tight text-pulse-950`}>
                           Headline Level {h.name.slice(1)}
                         </div>
                       </div>
@@ -165,10 +166,10 @@ export function TypographyPreview() {
                   <div className="grid grid-cols-1 gap-8">
                     {weights.map((w) => (
                       <div key={w.label} className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
-                        <div className="min-w-[120px] text-[9px] text-slate-400 uppercase font-bold">
+                        <div className="w-20 sm:w-[120px] shrink-0 text-[9px] text-slate-400 uppercase font-bold">
                           {w.label}
                         </div>
-                        <div className={`text-${s.name} ${w.class} ${activeTab.class} leading-tight text-pulse-950`}>
+                        <div className={`min-w-0 text-${s.name} ${w.class} ${activeTab.class} leading-tight text-pulse-950`}>
                           The quick brown fox jumps over the lazy dog
                         </div>
                       </div>
