@@ -81,7 +81,7 @@ export function TypographyPreview() {
         </nav>
 
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-sm font-bold uppercase tracking-widest text-slate-400">Typography System</h1>
+          <p className="text-sm font-bold uppercase tracking-widest text-slate-400">Typography System</p>
           <div className="text-xs text-slate-500">Viewport: {width}px</div>
         </div>
         
@@ -92,6 +92,7 @@ export function TypographyPreview() {
               <button
                 key={f.id}
                 onClick={() => setActiveTab(f)}
+                aria-pressed={activeTab.id === f.id}
                 className={`px-4 py-2 rounded text-sm font-bold transition-all relative group ${
                   activeTab.id === f.id
                     ? "bg-pulse-900 text-white shadow-lg shadow-pulse-900/20"

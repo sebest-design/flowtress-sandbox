@@ -49,7 +49,7 @@ export function ColorSchemePreview() {
         </nav>
 
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-sm font-bold uppercase tracking-widest text-slate-400">Color System Matrix</h1>
+          <p className="text-sm font-bold uppercase tracking-widest text-slate-400">Color System Matrix</p>
           <div className="text-xs text-slate-500">Model: Professional Pulse (OKLCH)</div>
         </div>
       </header>
@@ -61,7 +61,7 @@ export function ColorSchemePreview() {
               <span>{palette.name}</span>
               <span className="text-slate-300">{palette.description}</span>
             </h2>
-            <div className="grid grid-cols-11 gap-2">
+            <div className="grid grid-cols-6 sm:grid-cols-11 gap-2">
               {palette.shades.map((shade) => (
                 <div key={shade} className="space-y-3 group">
                   <div 
@@ -83,23 +83,36 @@ export function ColorSchemePreview() {
           <h2 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-8 pb-2 border-b border-slate-100">
             WCAG Accessibility Compliance
           </h2>
-          <div className="grid grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-white text-copper-600 border border-slate-200 shadow-sm flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Copper 600 on White</span>
-                <span className="text-4xl font-black italic tracking-tighter text-pulse-900">4.58:1</span>
-                <span className="text-[10px] font-bold bg-green-500/10 text-green-600 self-start px-2 py-0.5 rounded border border-green-500/20">AA PASS</span>
-            </div>
-            <div className="p-8 rounded-3xl bg-pulse-900 text-copper-400 border border-pulse-800 shadow-xl flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-widest opacity-50">Copper 400 on Pulse 900</span>
-                <span className="text-4xl font-black italic tracking-tighter text-white">5.12:1</span>
-                <span className="text-[10px] font-bold bg-green-500/20 text-green-400 self-start px-2 py-0.5 rounded border border-green-400/20">AA PASS</span>
-            </div>
-            <div className="p-8 rounded-3xl bg-white text-pulse-900 border border-slate-200 shadow-sm flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Pulse 900 on White</span>
-                <span className="text-4xl font-black italic tracking-tighter text-pulse-900">14.2:1</span>
-                <span className="text-[10px] font-bold bg-green-500/10 text-green-600 self-start px-2 py-0.5 rounded border border-green-500/20">AAA PASS</span>
-            </div>
-          </div>
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-slate-100">
+                <th className="text-left text-[9px] font-bold uppercase tracking-widest text-slate-300 pb-3 pr-8">Combination</th>
+                <th className="text-left text-[9px] font-bold uppercase tracking-widest text-slate-300 pb-3 pr-8">Ratio</th>
+                <th className="text-left text-[9px] font-bold uppercase tracking-widest text-slate-300 pb-3 pr-8">WCAG</th>
+                <th className="text-left text-[9px] font-bold uppercase tracking-widest text-slate-300 pb-3">Sample</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              <tr>
+                <td className="py-4 pr-8 text-[10px] font-mono text-slate-500">copper-600 on white</td>
+                <td className="py-4 pr-8 font-bold text-pulse-900 tabular-nums">4.58:1</td>
+                <td className="py-4 pr-8 text-[10px] font-bold text-green-600 uppercase tracking-wider">AA</td>
+                <td className="py-4"><span className="text-copper-600 font-bold text-sm">Sample text</span></td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-8 text-[10px] font-mono text-slate-500">copper-400 on pulse-900</td>
+                <td className="py-4 pr-8 font-bold text-pulse-900 tabular-nums">5.12:1</td>
+                <td className="py-4 pr-8 text-[10px] font-bold text-green-600 uppercase tracking-wider">AA</td>
+                <td className="py-4"><span className="bg-pulse-900 text-copper-400 font-bold text-sm px-2 py-0.5 rounded">Sample text</span></td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-8 text-[10px] font-mono text-slate-500">pulse-900 on white</td>
+                <td className="py-4 pr-8 font-bold text-pulse-900 tabular-nums">14.2:1</td>
+                <td className="py-4 pr-8 text-[10px] font-bold text-green-600 uppercase tracking-wider">AAA</td>
+                <td className="py-4"><span className="text-pulse-900 font-bold text-sm">Sample text</span></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </main>
     </div>
