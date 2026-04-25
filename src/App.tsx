@@ -38,7 +38,7 @@ const indexRoute = createRoute({
         <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-copper-500">Design System</p>
         <div>
           <h1 className="text-7xl xl:text-8xl font-black tracking-tighter leading-none text-white mb-8">
-            FLOW<br/>TRESS
+            FLOWTRESS
           </h1>
           <p className="text-base text-pulse-300 leading-relaxed max-w-[38ch]">
             Institutional-grade security with the velocity of an agile startup.
