@@ -96,19 +96,19 @@ export function ColorSchemePreview() {
               <tr>
                 <td className="py-4 pr-8 text-[10px] font-mono text-slate-500">copper-600 on white</td>
                 <td className="py-4 pr-8 font-bold text-pulse-900 tabular-nums">4.58:1</td>
-                <td className="py-4 pr-8 text-[10px] font-bold text-green-600 uppercase tracking-wider">AA</td>
+                <td className="py-4 pr-8 text-[10px] font-bold text-copper-700 uppercase tracking-wider">AA</td>
                 <td className="py-4"><span className="text-copper-600 font-bold text-sm">Sample text</span></td>
               </tr>
               <tr>
                 <td className="py-4 pr-8 text-[10px] font-mono text-slate-500">copper-400 on pulse-900</td>
                 <td className="py-4 pr-8 font-bold text-pulse-900 tabular-nums">5.12:1</td>
-                <td className="py-4 pr-8 text-[10px] font-bold text-green-600 uppercase tracking-wider">AA</td>
+                <td className="py-4 pr-8 text-[10px] font-bold text-copper-700 uppercase tracking-wider">AA</td>
                 <td className="py-4"><span className="bg-pulse-900 text-copper-400 font-bold text-sm px-2 py-0.5 rounded">Sample text</span></td>
               </tr>
               <tr>
                 <td className="py-4 pr-8 text-[10px] font-mono text-slate-500">pulse-900 on white</td>
                 <td className="py-4 pr-8 font-bold text-pulse-900 tabular-nums">14.2:1</td>
-                <td className="py-4 pr-8 text-[10px] font-bold text-green-600 uppercase tracking-wider">AAA</td>
+                <td className="py-4 pr-8 text-[10px] font-bold text-copper-700 uppercase tracking-wider">AAA</td>
                 <td className="py-4"><span className="text-pulse-900 font-bold text-sm">Sample text</span></td>
               </tr>
             </tbody>

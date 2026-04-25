@@ -26,7 +26,7 @@ export function ColorCombinationsMatrix() {
         </nav>
 
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-sm font-bold uppercase tracking-widest text-slate-400">Color Pairing Matrix</h1>
+          <p className="text-sm font-bold uppercase tracking-widest text-slate-400">Color Pairing Matrix</p>
           <div className="text-xs text-slate-500">Model: Professional Pulse (OKLCH)</div>
         </div>
       </header>
@@ -51,9 +51,9 @@ export function ColorCombinationsMatrix() {
                 </div>
                 
                 <div className="space-y-6 mb-12">
-                    <div className="h-4 bg-slate-100 rounded-full w-3/4"></div>
-                    <div className="h-4 bg-slate-100 rounded-full w-1/2"></div>
-                    <button className="bg-copper-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-copper-600/20 active:scale-95 transition-transform">Primary Action</button>
+                    <div className="h-4 bg-slate-100 rounded w-3/4"></div>
+                    <div className="h-4 bg-slate-100 rounded w-1/2"></div>
+                    <button aria-label="Primary action example" className="bg-copper-600 text-white px-8 py-3 rounded font-bold active:scale-95 transition-transform">Primary Action</button>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 pt-8 border-t border-slate-100">
@@ -83,9 +83,9 @@ export function ColorCombinationsMatrix() {
                 </div>
                 
                 <div className="space-y-6 mb-12">
-                    <div className="h-4 bg-pulse-900 rounded-full w-2/3"></div>
-                    <div className="h-4 bg-pulse-900 rounded-full w-1/3"></div>
-                    <button className="bg-copper-500 text-pulse-950 px-8 py-3 rounded-xl font-bold shadow-lg shadow-copper-500/10 active:scale-95 transition-transform">Active Security</button>
+                    <div className="h-4 bg-pulse-900 rounded w-2/3"></div>
+                    <div className="h-4 bg-pulse-900 rounded w-1/3"></div>
+                    <button aria-label="Active security action example" className="bg-copper-500 text-pulse-950 px-8 py-3 rounded font-bold active:scale-95 transition-transform">Active Security</button>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 pt-8 border-t border-pulse-900">
@@ -122,7 +122,7 @@ export function ColorCombinationsMatrix() {
             <tbody className="divide-y divide-slate-100">
               <tr>
                 <td className="py-4 pr-8 font-bold text-pulse-900 text-xs uppercase tracking-tighter">System Active</td>
-                <td className="py-4 pr-8"><div className="size-2 rounded-full bg-copper-500 animate-pulse inline-block" /></td>
+                <td className="py-4 pr-8"><div className="size-2 rounded-full bg-copper-500 motion-safe:animate-pulse inline-block" aria-hidden="true" /></td>
                 <td className="py-4 text-[10px] font-mono text-slate-400">copper-500 + pulse-950</td>
               </tr>
               <tr>

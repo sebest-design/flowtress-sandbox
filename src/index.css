@@ -6,9 +6,6 @@
   --font-condensed: "Roboto Condensed", "sans-serif";
   --font-serif: "Lora", "serif";
 
-  --color-primary: oklch(0.58 0.19 45); /* Copper-600 */
-  --color-accent: oklch(0.25 0.08 275);  /* Pulse-Indigo-900 */
-
   /* Brand Copper - Optimized for 4.5:1 Contrast at 600 */
   --color-copper-50: oklch(0.97 0.01 45);
   --color-copper-100: oklch(0.92 0.03 45);
@@ -52,5 +49,13 @@
 @layer base {
   body {
     @apply bg-slate-50 text-pulse-950 selection:bg-copper-100 selection:text-copper-900;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

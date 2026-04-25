@@ -95,7 +95,7 @@ export function TypographyPreview() {
                 aria-pressed={activeTab.id === f.id}
                 className={`px-4 py-2 rounded text-sm font-bold transition-all relative group ${
                   activeTab.id === f.id
-                    ? "bg-pulse-900 text-white shadow-lg shadow-pulse-900/20"
+                    ? "bg-pulse-900 text-white ring-1 ring-pulse-900"
                     : "bg-white text-slate-500 hover:bg-slate-100 border border-slate-200"
                 }`}
               >
