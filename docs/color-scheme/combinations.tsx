@@ -5,7 +5,7 @@ export function ColorCombinationsMatrix() {
     <div className="min-h-screen bg-slate-50 text-pulse-950 font-sans">
 
       {/* Committed-color page header — Pulse 950 drench establishes hierarchy immediately */}
-      <header className="bg-pulse-950 text-white px-8 pt-10 pb-0">
+      <header className="bg-pulse-950 text-white px-4 sm:px-8 pt-10 pb-0">
         <nav className="flex gap-6 mb-10 border-b border-pulse-800 pb-4">
           <Link 
             to="/color-scheme" 
@@ -39,11 +39,11 @@ export function ColorCombinationsMatrix() {
         </div>
       </header>
 
-      <main className="px-8 py-16 space-y-32">
+      <main className="px-4 sm:px-8 py-16 space-y-32">
 
         {/* Brand Combinations */}
         <section>
-          <div className="flex items-baseline justify-between mb-12 pb-3 border-b border-slate-200">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-12 pb-3 border-b border-slate-200">
             <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400">Core Brand Pairings</h2>
             <span className="text-[10px] text-slate-300 font-mono">WCAG AA validated</span>
           </div>
@@ -117,7 +117,7 @@ export function ColorCombinationsMatrix() {
 
         {/* Status Pairings — committed dark surface, not a neutral table */}
         <section>
-          <div className="flex items-baseline justify-between mb-12 pb-3 border-b border-slate-200">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-12 pb-3 border-b border-slate-200">
             <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400">Functional Status Pairings</h2>
             <span className="text-[10px] text-slate-300 font-mono">Semantic color roles</span>
           </div>

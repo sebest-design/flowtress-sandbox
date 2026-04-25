@@ -26,7 +26,7 @@ const palettes = [
 export function ColorSchemePreview() {
   return (
     <div className="min-h-screen bg-slate-50 text-pulse-950 font-sans">
-      <header className="bg-pulse-950 text-white px-8 pt-10 pb-0">
+      <header className="bg-pulse-950 text-white px-4 sm:px-8 pt-10 pb-0">
         <nav className="flex gap-6 mb-10 border-b border-pulse-800 pb-4">
           <Link 
             to="/color-scheme" 
@@ -59,14 +59,14 @@ export function ColorSchemePreview() {
         </div>
       </header>
 
-      <main className="px-8 py-16 space-y-24">
+      <main className="px-4 sm:px-8 py-16 space-y-24">
         {palettes.map((palette) => (
           <section key={palette.name}>
             <div className="flex items-baseline justify-between mb-8 pb-3 border-b border-slate-200">
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400">{palette.name}</h2>
               <span className="text-[10px] text-slate-300 font-mono">{palette.description}</span>
             </div>
-            <div className="grid grid-cols-6 sm:grid-cols-11 gap-2">
+            <div className="grid grid-cols-4 xs:grid-cols-6 sm:grid-cols-11 gap-2">
               {palette.shades.map((shade) => (
                 <div key={shade} className="space-y-3 group">
                   <div 
@@ -93,34 +93,34 @@ export function ColorSchemePreview() {
             <div className="px-8 py-5 border-b border-pulse-800">
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-pulse-400">Validated pairings</p>
             </div>
-            <div className="px-8 py-7 border-b border-pulse-800 flex items-center justify-between gap-8">
+            <div className="px-4 sm:px-8 py-7 border-b border-pulse-800 flex flex-wrap items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-white uppercase tracking-tight">Copper 600 on White</p>
                 <p className="text-[10px] text-pulse-400 mt-0.5 font-mono">copper-600 · white</p>
               </div>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4 sm:gap-6">
                 <span className="text-2xl font-black text-white tabular-nums">4.58:1</span>
                 <span className="text-[9px] font-bold text-copper-500 uppercase tracking-widest">AA</span>
                 <span className="text-copper-600 font-bold text-sm bg-white px-3 py-1 rounded">Sample text</span>
               </div>
             </div>
-            <div className="px-8 py-7 border-b border-pulse-800 flex items-center justify-between gap-8">
+            <div className="px-4 sm:px-8 py-7 border-b border-pulse-800 flex flex-wrap items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-white uppercase tracking-tight">Copper 400 on Pulse 900</p>
                 <p className="text-[10px] text-pulse-400 mt-0.5 font-mono">copper-400 · pulse-900</p>
               </div>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4 sm:gap-6">
                 <span className="text-2xl font-black text-white tabular-nums">5.12:1</span>
                 <span className="text-[9px] font-bold text-copper-500 uppercase tracking-widest">AA</span>
                 <span className="bg-pulse-900 text-copper-400 font-bold text-sm px-3 py-1 rounded border border-pulse-800">Sample text</span>
               </div>
             </div>
-            <div className="px-8 py-7 flex items-center justify-between gap-8">
+            <div className="px-4 sm:px-8 py-7 flex flex-wrap items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-white uppercase tracking-tight">Pulse 900 on White</p>
                 <p className="text-[10px] text-pulse-400 mt-0.5 font-mono">pulse-900 · white</p>
               </div>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4 sm:gap-6">
                 <span className="text-2xl font-black text-white tabular-nums">14.2:1</span>
                 <span className="text-[9px] font-bold text-copper-500 uppercase tracking-widest">AAA</span>
                 <span className="text-pulse-900 font-bold text-sm bg-white px-3 py-1 rounded">Sample text</span>

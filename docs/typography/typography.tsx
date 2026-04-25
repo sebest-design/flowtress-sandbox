@@ -58,7 +58,7 @@ export function TypographyPreview() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-pulse-950 font-sans">
-      <header className="bg-pulse-950 text-white px-8 pt-10 pb-0">
+      <header className="bg-pulse-950 text-white px-4 sm:px-8 pt-10 pb-0">
         <nav className="flex gap-6 mb-10 border-b border-pulse-800 pb-4">
           <Link 
             to="/typography" 
@@ -119,7 +119,7 @@ export function TypographyPreview() {
         </div>
       </header>
 
-      <main className="px-8 py-16">
+      <main className="px-4 sm:px-8 py-16">
         <div className="grid grid-cols-1 gap-24">
           {/* Responsive Headings Weight Matrix */}
           <section>
