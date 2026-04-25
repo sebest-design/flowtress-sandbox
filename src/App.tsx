@@ -32,20 +32,22 @@ const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
   component: () => (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 text-center relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--color-copper-500)_0%,_transparent_70%)] opacity-[0.03]"></div>
-      <h1 className="text-8xl font-black mb-6 bg-gradient-to-br from-pulse-950 via-pulse-900 to-copper-600 bg-clip-text text-transparent tracking-tighter">
+    <div className="flex flex-col items-center justify-center min-h-screen px-8 py-24 text-center">
+      <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-copper-600 mb-8">
+        Design System Preview
+      </p>
+      <h1 className="text-8xl font-black mb-6 text-pulse-950 tracking-tighter leading-none">
         FLOWTRESS
       </h1>
-      <p className="text-xl text-slate-500 max-w-2xl mb-12 leading-relaxed">
-        Institutional-grade security with the velocity of an agile startup. <br/>
+      <p className="text-xl text-slate-500 max-w-[52ch] mb-16 leading-relaxed">
+        Institutional-grade security with the velocity of an agile startup.
         Built for high-performance data and regulated flows.
       </p>
-      <div className="flex gap-4 relative z-10">
-        <Link to="/color-scheme" className="bg-pulse-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-pulse-800 transition-all shadow-xl shadow-pulse-900/20 active:scale-95">
+      <div className="flex gap-3">
+        <Link to="/color-scheme" className="bg-pulse-900 text-white px-8 py-3.5 rounded font-bold text-sm hover:bg-pulse-800 transition-colors active:scale-[0.98]">
           Color Matrix
         </Link>
-        <Link to="/typography" className="bg-white border border-slate-200 text-pulse-900 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all shadow-sm active:scale-95">
+        <Link to="/typography" className="bg-transparent border border-slate-300 text-pulse-900 px-8 py-3.5 rounded font-bold text-sm hover:border-pulse-900 hover:bg-slate-50 transition-colors active:scale-[0.98]">
           Typography Matrix
         </Link>
       </div>

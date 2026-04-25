@@ -31,7 +31,7 @@ export function FontCombinationsMatrix() {
           </Link>
         </nav>
 
-        <h1 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Font Pairing Matrix</h1>
+        <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Font Pairing Matrix</p>
         <p className="text-[10px] text-slate-300 uppercase tracking-tighter">Strictly Arial Metadata • Horizontal: Heading Axis (Roboto Primary) • Vertical: Body Axis</p>
       </header>
 
