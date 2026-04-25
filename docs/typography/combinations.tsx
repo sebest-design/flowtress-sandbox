@@ -9,7 +9,7 @@ const fonts = [
 export function FontCombinationsMatrix() {
   return (
     <div className="min-h-screen bg-slate-50 text-pulse-950 font-sans">
-      <header className="bg-pulse-950 text-white px-8 pt-10 pb-0">
+      <header className="bg-pulse-950 text-white px-4 sm:px-8 pt-10 pb-0">
         <nav className="flex gap-6 mb-10 border-b border-pulse-800 pb-4">
           <Link 
             to="/typography" 
@@ -50,12 +50,12 @@ export function FontCombinationsMatrix() {
         </div>
       </header>
 
-      <main className="px-8 py-16">
+      <main className="px-4 sm:px-8 py-16">
         <div className="space-y-16">
           {fonts.map((bFont) => (
             <div key={bFont.id} className="grid grid-cols-1 lg:grid-cols-4 gap-8">
               {/* Row Label */}
-              <div className="flex flex-col justify-center border-r border-slate-200 pr-4">
+              <div className="flex flex-col justify-center lg:border-r border-b lg:border-b-0 border-slate-200 pb-4 lg:pb-0 pr-4">
                 <span className="text-[9px] font-bold uppercase tracking-widest text-slate-300">Body Axis</span>
                 <span className="text-sm font-bold text-pulse-900">{bFont.name}</span>
                 <span className="text-[9px] text-slate-300 uppercase mt-1">{bFont.role}</span>

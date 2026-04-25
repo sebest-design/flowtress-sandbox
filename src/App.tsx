@@ -34,10 +34,10 @@ const indexRoute = createRoute({
   component: () => (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
       {/* Left: committed pulse-950 drench */}
-      <div className="bg-pulse-950 flex flex-col justify-between px-12 py-16 min-h-[50vh] lg:min-h-screen">
+      <div className="bg-pulse-950 flex flex-col justify-between px-6 sm:px-10 lg:px-12 py-16 min-h-[50vh] lg:min-h-screen">
         <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-copper-500">Design System</p>
         <div>
-          <h1 className="text-7xl xl:text-8xl font-black tracking-tighter leading-none text-white mb-8">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter leading-none text-white mb-8">
             FLOWTRESS
           </h1>
           <p className="text-base text-pulse-300 leading-relaxed max-w-[38ch]">
@@ -48,7 +48,7 @@ const indexRoute = createRoute({
         <p className="text-[9px] font-mono text-pulse-700 uppercase tracking-widest">OKLCH Color System · Roboto + Lora</p>
       </div>
       {/* Right: light navigation surface */}
-      <div className="flex flex-col justify-center px-12 py-16 bg-slate-50 gap-6">
+      <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-12 py-16 bg-slate-50 gap-6">
         <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Design matrices</p>
         <Link
           to="/color-scheme"
