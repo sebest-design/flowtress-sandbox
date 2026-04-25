@@ -51,9 +51,9 @@ Flowtress specifically targets:
 
 ## 4. Non-Functional Requirements
 
-- **NFR-01: Modern Aesthetic:** Dark mode by default, glassmorphism, and intentional motion to signal a "disruptive" identity.
+- **NFR-01: Modern Aesthetic:** A committed brand color strategy using the established OKLCH palette (Pulse Indigo anchor + Copper accent). Light or dark mode chosen per surface based on ambient context and user scene, never as a blanket default. No glassmorphism defaults, no gradient text, no decorative blur glows. Motion is purposeful and ease-out only.
 - **NFR-02: Performance:** Sub-1s page loads to demonstrate technical excellence to AI and FinTech clients.
-- **NFR-03: Trust Signals:** High-density, well-organized bento grids to imply stability despite the disruptive vibe.
+- **NFR-03: Trust Signals:** Clear information hierarchy, outcome-led storytelling surfaces, and restrained layout that lets results speak. Stability is communicated through precision and craft, not visual density.
 
 ---
 
@@ -104,5 +104,6 @@ The following stack has been installed, configured, and verified:
 
 ## 7. Guiding Philosophies
 
-- **No-Slop Design:** Adhering to high-quality, high-standards code and design principles (Referencing the "stop-slop" philosophy for future documentation refinements).
+- **No-Slop Design:** Every design decision must pass the AI slop test. If someone can look at this interface and say "AI made that" without doubt, it has failed. Explicitly banned: gradient text (`background-clip: text`), glassmorphism as a default surface treatment, decorative blur glows, side-stripe card borders, identical card grids, and hero-metric templates (big number + label + badge). The established OKLCH color system and Roboto/Lora typography pairing are the design standard.
 - **Clarity Over Jargon:** Every piece of copy must serve the "Problem -> Solution -> Outcome" narrative.
+- **Intentional Register:** Every surface is classified as brand (design IS the product) or product (design SERVES the product) before work begins. Theme and palette follow from a concrete scene description, not from category reflexes (e.g., not "FinTech = dark navy" by default).
