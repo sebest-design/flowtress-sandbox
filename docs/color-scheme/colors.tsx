@@ -62,15 +62,15 @@ export function ColorSchemePreview() {
       <main className="px-4 sm:px-8 py-16 space-y-24">
         {palettes.map((palette) => (
           <section key={palette.name}>
-            <div className="flex items-baseline justify-between mb-8 pb-3 border-b border-slate-200">
+            <div className="flex flex-wrap items-baseline justify-between gap-y-1 gap-x-4 mb-8 pb-3 border-b border-slate-200">
               <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400">{palette.name}</h2>
-              <span className="text-[10px] text-slate-300 font-mono">{palette.description}</span>
+              <span className="text-[10px] text-slate-300 font-mono hidden sm:block">{palette.description}</span>
             </div>
             <div className="grid grid-cols-4 xs:grid-cols-6 sm:grid-cols-11 gap-2">
               {palette.shades.map((shade) => (
                 <div key={shade} className="space-y-3 group">
                   <div 
-                    className={`h-40 rounded-lg shadow-sm transition-transform group-hover:scale-[1.02] bg-${palette.prefix}-${shade} ${shade === 600 || (palette.prefix === 'pulse' && shade === 900) ? 'ring-2 ring-pulse-900 ring-offset-2' : 'border border-slate-200/50'}`}
+                    className={`h-16 sm:h-28 lg:h-40 rounded-lg shadow-sm transition-transform group-hover:scale-[1.02] bg-${palette.prefix}-${shade} ${shade === 600 || (palette.prefix === 'pulse' && shade === 900) ? 'ring-2 ring-pulse-900 ring-offset-2' : 'border border-slate-200/50'}`}
                   ></div>
                   <div className="flex flex-col gap-1">
                     <span className={`text-[10px] font-bold ${shade === 600 || (palette.prefix === 'pulse' && shade === 900) ? 'text-pulse-900' : 'text-slate-500'}`}>
@@ -90,7 +90,7 @@ export function ColorSchemePreview() {
             <span className="text-[10px] text-slate-300 font-mono">Contrast ratios</span>
           </div>
           <div className="bg-pulse-950 rounded-lg border border-pulse-800 overflow-hidden">
-            <div className="px-8 py-5 border-b border-pulse-800">
+            <div className="px-4 sm:px-8 py-5 border-b border-pulse-800">
               <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-pulse-400">Validated pairings</p>
             </div>
             <div className="px-4 sm:px-8 py-7 border-b border-pulse-800 flex flex-wrap items-center justify-between gap-4">
