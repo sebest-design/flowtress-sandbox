@@ -32,23 +32,39 @@ const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
   component: () => (
-    <div className="flex flex-col items-center justify-center min-h-screen px-8 py-24 text-center">
-      <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-copper-600 mb-8">
-        Design System Preview
-      </p>
-      <h1 className="text-8xl font-black mb-6 text-pulse-950 tracking-tighter leading-none">
-        FLOWTRESS
-      </h1>
-      <p className="text-xl text-slate-500 max-w-[52ch] mb-16 leading-relaxed">
-        Institutional-grade security with the velocity of an agile startup.
-        Built for high-performance data and regulated flows.
-      </p>
-      <div className="flex gap-3">
-        <Link to="/color-scheme" className="bg-pulse-900 text-white px-8 py-3.5 rounded font-bold text-sm hover:bg-pulse-800 transition-colors active:scale-[0.98]">
-          Color Matrix
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+      {/* Left: committed pulse-950 drench */}
+      <div className="bg-pulse-950 flex flex-col justify-between px-12 py-16 min-h-[50vh] lg:min-h-screen">
+        <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-copper-500">Design System</p>
+        <div>
+          <h1 className="text-7xl xl:text-8xl font-black tracking-tighter leading-none text-white mb-8">
+            FLOW<br/>TRESS
+          </h1>
+          <p className="text-base text-pulse-300 leading-relaxed max-w-[38ch]">
+            Institutional-grade security with the velocity of an agile startup.
+            Built for high-performance data and regulated flows.
+          </p>
+        </div>
+        <p className="text-[9px] font-mono text-pulse-700 uppercase tracking-widest">OKLCH Color System · Roboto + Lora</p>
+      </div>
+      {/* Right: light navigation surface */}
+      <div className="flex flex-col justify-center px-12 py-16 bg-slate-50 gap-6">
+        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Design matrices</p>
+        <Link
+          to="/color-scheme"
+          className="group border border-slate-200 bg-white rounded-lg px-8 py-7 hover:border-pulse-900 transition-colors"
+        >
+          <p className="text-[9px] font-bold uppercase tracking-widest text-copper-600 mb-2">01</p>
+          <p className="text-lg font-black text-pulse-950 tracking-tight group-hover:text-pulse-900 transition-colors">Color Matrix</p>
+          <p className="text-xs text-slate-400 mt-2">OKLCH palettes, pairings, and WCAG compliance</p>
         </Link>
-        <Link to="/typography" className="bg-transparent border border-slate-300 text-pulse-900 px-8 py-3.5 rounded font-bold text-sm hover:border-pulse-900 hover:bg-slate-50 transition-colors active:scale-[0.98]">
-          Typography Matrix
+        <Link
+          to="/typography"
+          className="group border border-slate-200 bg-white rounded-lg px-8 py-7 hover:border-pulse-900 transition-colors"
+        >
+          <p className="text-[9px] font-bold uppercase tracking-widest text-copper-600 mb-2">02</p>
+          <p className="text-lg font-black text-pulse-950 tracking-tight group-hover:text-pulse-900 transition-colors">Typography Matrix</p>
+          <p className="text-xs text-slate-400 mt-2">Roboto, Roboto Condensed, Lora — responsive scale and weight</p>
         </Link>
       </div>
     </div>

@@ -8,41 +8,49 @@ const fonts = [
 
 export function FontCombinationsMatrix() {
   return (
-    <div className="min-h-screen bg-slate-50 text-pulse-950 p-8 font-sans">
-      <header className="mb-12 border-b border-slate-200 pb-6">
-        <nav className="flex gap-6 mb-8 border-b border-slate-100 pb-4">
+    <div className="min-h-screen bg-slate-50 text-pulse-950 font-sans">
+      <header className="bg-pulse-950 text-white px-8 pt-10 pb-0">
+        <nav className="flex gap-6 mb-10 border-b border-pulse-800 pb-4">
           <Link 
             to="/typography" 
-            className="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-pulse-900 transition-colors"
+            className="text-[10px] font-bold uppercase tracking-widest text-pulse-400 hover:text-white transition-colors"
           >
             System Matrix
           </Link>
           <Link 
             to="/typography/combinations" 
-            className="text-[10px] font-bold uppercase tracking-widest text-pulse-900 underline underline-offset-8 decoration-copper-500 transition-colors"
+            className="text-[10px] font-bold uppercase tracking-widest text-white underline underline-offset-8 decoration-copper-500 transition-colors"
           >
             Pairing Matrix
           </Link>
           <Link 
             to="/color-scheme" 
-            className="ml-auto text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-pulse-900 transition-colors"
+            className="ml-auto text-[10px] font-bold uppercase tracking-widest text-pulse-400 hover:text-white transition-colors"
           >
             Color Matrix →
           </Link>
         </nav>
 
-        <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Font Pairing Matrix</p>
-        <p className="text-[10px] text-slate-300 uppercase tracking-tighter">Strictly Arial Metadata • Horizontal: Heading Axis (Roboto Primary) • Vertical: Body Axis</p>
-      </header>
-
-      <main>
-        {/* Axis Labels for Large Screens */}
-        <div className="hidden lg:grid grid-cols-4 gap-8 mb-8">
-          <div className="col-start-2 text-[9px] font-bold uppercase text-center text-slate-300">Heading: {fonts[0].name} (99%)</div>
-          <div className="text-[9px] font-bold uppercase text-center text-slate-300">Heading: {fonts[1].name}</div>
-          <div className="text-[9px] font-bold uppercase text-center text-slate-300">Heading: {fonts[2].name}</div>
+        <div className="max-w-2xl pb-10">
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-copper-500 mb-4">Typography System</p>
+          <h1 className="text-5xl font-black tracking-tighter leading-none text-white mb-6">
+            Pairing Matrix
+          </h1>
+          <p className="text-base text-pulse-300 leading-relaxed max-w-[52ch]">
+            Every heading and body font combination rendered side by side.
+            Horizontal axis: heading font. Vertical axis: body font.
+          </p>
         </div>
 
+        {/* Axis labels inside header */}
+        <div className="hidden lg:grid grid-cols-4 gap-8 pb-6 border-t border-pulse-800 pt-5">
+          <div className="col-start-2 text-[9px] font-bold uppercase text-center text-pulse-600">H: {fonts[0].name} (99%)</div>
+          <div className="text-[9px] font-bold uppercase text-center text-pulse-600">H: {fonts[1].name}</div>
+          <div className="text-[9px] font-bold uppercase text-center text-pulse-600">H: {fonts[2].name}</div>
+        </div>
+      </header>
+
+      <main className="px-8 py-16">
         <div className="space-y-16">
           {fonts.map((bFont) => (
             <div key={bFont.id} className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -57,7 +65,7 @@ export function FontCombinationsMatrix() {
               {fonts.map((hFont) => (
                 <div 
                   key={`${hFont.id}-${bFont.id}`} 
-                  className={`bg-white border border-slate-200 p-8 rounded-2xl flex flex-col gap-8 group transition-all hover:shadow-xl hover:shadow-pulse-900/5 ${
+                  className={`bg-white border border-slate-200 p-8 rounded-lg flex flex-col gap-8 group transition-all hover:shadow-xl hover:shadow-pulse-900/5 ${
                     hFont.id === 'sans' && bFont.id === 'sans' ? 'ring-2 ring-copper-500/20 bg-white' : ''
                   }`}
                 >

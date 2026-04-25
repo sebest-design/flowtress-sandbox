@@ -57,37 +57,43 @@ export function TypographyPreview() {
   const width = useViewportWidth();
 
   return (
-    <div className="min-h-screen bg-slate-50 text-pulse-950 p-8 font-sans">
-      <header className="mb-12 border-b border-slate-200 pb-6">
-        <nav className="flex gap-6 mb-8 border-b border-slate-100 pb-4">
+    <div className="min-h-screen bg-slate-50 text-pulse-950 font-sans">
+      <header className="bg-pulse-950 text-white px-8 pt-10 pb-0">
+        <nav className="flex gap-6 mb-10 border-b border-pulse-800 pb-4">
           <Link 
             to="/typography" 
-            className="text-[10px] font-bold uppercase tracking-widest text-pulse-900 underline underline-offset-8 decoration-copper-500 transition-colors"
+            className="text-[10px] font-bold uppercase tracking-widest text-white underline underline-offset-8 decoration-copper-500 transition-colors"
           >
             System Matrix
           </Link>
           <Link 
             to="/typography/combinations" 
-            className="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-pulse-900 transition-colors"
+            className="text-[10px] font-bold uppercase tracking-widest text-pulse-400 hover:text-white transition-colors"
           >
             Pairing Matrix
           </Link>
           <Link 
             to="/color-scheme" 
-            className="ml-auto text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-pulse-900 transition-colors"
+            className="ml-auto text-[10px] font-bold uppercase tracking-widest text-pulse-400 hover:text-white transition-colors"
           >
             Color Matrix →
           </Link>
         </nav>
 
-        <div className="flex justify-between items-center mb-8">
-          <p className="text-sm font-bold uppercase tracking-widest text-slate-400">Typography System</p>
-          <div className="text-xs text-slate-500">Viewport: {width}px</div>
+        <div className="max-w-2xl pb-10">
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-copper-500 mb-4">Typography System</p>
+          <h1 className="text-5xl font-black tracking-tighter leading-none text-white mb-6">
+            System Matrix
+          </h1>
+          <p className="text-base text-pulse-300 leading-relaxed max-w-[52ch]">
+            Roboto as primary workhorse, Roboto Condensed for dense UI, Lora for display moments.
+            Fluid scale, WCAG-grade weight contrast.
+          </p>
         </div>
-        
-        <div className="flex flex-col gap-2">
-          <span className="text-[9px] font-bold uppercase tracking-tight text-slate-300">Select Typeface</span>
-          <nav className="flex gap-2">
+
+        <div className="pb-8 border-t border-pulse-800 pt-6">
+          <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-pulse-400 block mb-3">Select Typeface</span>
+          <div className="flex gap-2 items-center">
             {fonts.map((f) => (
               <button
                 key={f.id}
@@ -95,24 +101,25 @@ export function TypographyPreview() {
                 aria-pressed={activeTab.id === f.id}
                 className={`px-4 py-2 rounded text-sm font-bold transition-all relative group ${
                   activeTab.id === f.id
-                    ? "bg-pulse-900 text-white ring-1 ring-pulse-900"
-                    : "bg-white text-slate-500 hover:bg-slate-100 border border-slate-200"
+                    ? "bg-white text-pulse-950"
+                    : "bg-pulse-900 text-pulse-400 hover:bg-pulse-800 hover:text-white border border-pulse-800"
                 }`}
               >
                 {f.name}
-                <span className="absolute -top-2 -right-2 bg-slate-800 text-white text-[8px] px-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="absolute -top-2 -right-2 bg-copper-500 text-white text-[8px] px-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   {f.role}
                 </span>
                 {f.id === 'sans' && (
-                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-copper-500 rounded-full" />
+                  <span aria-hidden="true" className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-copper-500 rounded-full" />
                 )}
               </button>
             ))}
-          </nav>
+            <span className="ml-auto text-[9px] font-mono text-pulse-700">{width}px viewport</span>
+          </div>
         </div>
       </header>
 
-      <main>
+      <main className="px-8 py-16">
         <div className="grid grid-cols-1 gap-24">
           {/* Responsive Headings Weight Matrix */}
           <section>
