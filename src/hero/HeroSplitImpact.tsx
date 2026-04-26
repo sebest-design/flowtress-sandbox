@@ -5,7 +5,7 @@ export function HeroSplitImpact() {
     <div className="min-h-screen bg-slate-50 font-sans text-pulse-950">
 
       {/* Nav */}
-      <nav className="px-8 py-5 flex items-center justify-between border-b border-slate-200 bg-white">
+      <nav className="px-4 sm:px-8 py-5 flex items-center justify-between border-b border-slate-200 bg-white">
         <span className="text-sm font-black tracking-tighter text-pulse-950">FLOWTRESS</span>
         <div className="hidden md:flex items-center gap-8">
           <a href="#" className="text-[11px] font-bold uppercase tracking-widest text-slate-400 hover:text-pulse-900 transition-colors">Features</a>
@@ -21,10 +21,10 @@ export function HeroSplitImpact() {
       {/* Hero — 60/40 asymmetric split */}
       <section className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] min-h-[80vh]">
         {/* Text col */}
-        <div className="bg-pulse-950 px-8 md:px-16 py-24 flex flex-col justify-between">
+        <div className="bg-pulse-950 px-6 sm:px-10 md:px-16 py-16 sm:py-24 flex flex-col justify-between">
           <div />
           <div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-white mb-8 max-w-[16ch]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-white mb-8 max-w-[16ch]">
               Security That Doesn't Slow the Flow
             </h1>
             <p className="text-base text-pulse-300 leading-relaxed max-w-[46ch] mb-10">
@@ -44,7 +44,7 @@ export function HeroSplitImpact() {
           <p className="text-[9px] font-mono text-pulse-700 uppercase tracking-widest">OKLCH System · AES-256 · SOC 2</p>
         </div>
         {/* Live system status panel */}
-        <div className="bg-white border-l border-slate-200 px-8 py-12 flex flex-col justify-center gap-6">
+        <div className="bg-white border-t lg:border-t-0 border-l-0 lg:border-l border-slate-200 px-6 sm:px-8 py-10 sm:py-12 flex flex-col justify-center gap-6">
           <div className="flex items-center gap-2 mb-2">
             <div className="size-1.5 rounded-full bg-copper-500 motion-safe:animate-pulse" aria-hidden="true" />
             <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">Live System Status</span>
