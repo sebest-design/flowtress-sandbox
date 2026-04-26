@@ -110,9 +110,6 @@ export function TypographyPreview() {
                 <span className="absolute -top-2 -right-2 bg-copper-500 text-white text-[8px] px-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   {f.role}
                 </span>
-                {f.id === 'sans' && (
-                  <span aria-hidden="true" className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-copper-500 rounded-full" />
-                )}
               </button>
             ))}
             <span className="hidden sm:inline ml-auto text-[9px] font-mono text-pulse-700">{width}px viewport</span>
