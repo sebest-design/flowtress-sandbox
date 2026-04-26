@@ -19,17 +19,16 @@ export function HeroSplitImpact() {
       </nav>
 
       {/* Hero — 60/40 asymmetric split */}
-      <section className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] min-h-[80vh]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
         {/* Text col */}
-        <div className="bg-pulse-950 px-6 sm:px-10 md:px-16 py-16 sm:py-24 flex flex-col justify-between">
-          <div />
+        <div className="bg-pulse-950 px-6 sm:px-10 md:px-16 py-16 sm:py-24 flex flex-col justify-center">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-white mb-8 max-w-[16ch]">
-              Your Website Is Losing You Deals
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif tracking-tighter leading-none text-white mb-8 max-w-[16ch]">
+              Clients Judge You Before You Speak
             </h1>
             <p className="text-base text-pulse-300 leading-relaxed max-w-[46ch] mb-10">
-              In high-stakes industries, first impressions close deals.
-              We build websites that make the right one.
+              High-credibility industries need high-credibility websites.
+              We build both.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-copper-500 text-white px-10 py-4 font-bold text-sm rounded hover:bg-copper-400 transition-colors active:scale-[0.98]">
@@ -40,7 +39,6 @@ export function HeroSplitImpact() {
               </button>
             </div>
           </div>
-          <p className="text-[9px] font-mono text-pulse-700 uppercase tracking-widest">Web Design · High-Stakes Industries</p>
         </div>
         {/* Live system status panel */}
         <div className="bg-white border-t lg:border-t-0 border-l-0 lg:border-l border-slate-200 px-6 sm:px-8 py-10 sm:py-12 flex flex-col justify-center gap-6">

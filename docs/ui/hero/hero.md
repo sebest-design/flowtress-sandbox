@@ -1,33 +1,31 @@
 # Hero Section: Split Impact — Lo-Fi Wireframe
 
 ## Component Scope
-Hero section only — nav bar + 60/40 asymmetric split panel.
+Hero section only — nav bar + 50/50 split panel.
 No feature rows, no footer.
 
 ## Layout
 
-### Desktop (1440px) — 60/40 split, side by side
+### Desktop (1440px) — 50/50 split, side by side
 ```
-+------------------------------------------------------------------+----------------------------------+
-| FLOWTRESS          Features   Pricing   Docs   [ Request Access ]|                                  |
-+-------------------------------------- NAV ---|------ bg-white ---+----------------------------------+
-|                                              |                                                      |
-|                                              | BY THE NUMBERS                                       |
-|                                              |                                                      |
-|  Your Website Is                             | Clients served        12         projects            |
-|  Losing You Deals                            | ─────────────────────────────────────────           |
-|                                              | Industries            4          verticals           |
-|  In high-stakes industries, first            | ─────────────────────────────────────────           |
-|  impressions close deals. We build           | Avg. time to launch   3 wks      delivery           |
-|  websites that make the right one.           | ─────────────────────────────────────────           |
-|                                              | Client retention      91%        return rate         |
-|  [ Book a Call ]  [ See Our Work ]           |                                                      |
-|                                              |                                                      |
-|  Web Design · High-Stakes Industries         |                                                      |
-|                                              |                                                      |
-+----------------------------------------------+------------------------------------------------------+
-  <────────────── 60% ───────────────>          <────────── 40% ──────────>
-  bg-pulse-950 (dark)                           bg-white
++--------------------------------------------------+--------------------------------------------------+
+| FLOWTRESS       Features   Pricing   Docs   [ Request Access ]                                      |
++----------------------------------------- NAV ----+------ bg-white ----------------------------------+
+|                                                  |                                                  |
+|                                                  | BY THE NUMBERS                                   |
+|                                                  |                                                  |
+|  Clients Judge You                               | Clients served      12         projects          |
+|  Before You Speak                                | ───────────────────────────────────────   |
+|                                                  | Industries          4          verticals          |
+|  High-credibility industries need                | ───────────────────────────────────────   |
+|  high-credibility websites. We build both.       | Avg. time to launch 3 wks      delivery          |
+|                                                  | ───────────────────────────────────────   |
+|  [ Book a Call ]  [ See Our Work ]               | Client retention    91%        return rate        |
+|                                                  |                                                  |
+|                                                  |                                                  |
++--------------------------------------------------+--------------------------------------------------+
+  <───────────────────── 50% ─────────────────────>  <───────────────────── 50% ─────────────────────>
+  bg-pulse-950 (dark)                              bg-white
 ```
 
 ### Tablet (768px) — stacks to single column
@@ -36,15 +34,12 @@ No feature rows, no footer.
 | FLOWTRESS                                        [Menu]   |
 +-------------------------------- NAV ----------------------+
 |                                                           |
-|  Your Website Is Losing You Deals                         |
+|  Clients Judge You Before You Speak                       |
 |                                                           |
-|  In high-stakes industries, first impressions             |
-|  close deals. We build websites that make                 |
-|  the right one.                                           |
+|  High-credibility industries need                         |
+|  high-credibility websites. We build both.                |
 |                                                           |
 |  [ Book a Call ]    [ See Our Work ]                      |
-|                                                           |
-|  Web Design · High-Stakes Industries                      |
 |                                                           |
 +───────────────────────────── border-t ────────────────────+
 |                                                           |
@@ -68,18 +63,15 @@ No feature rows, no footer.
 | FLOWTRESS                    [← Back] |
 +--------------- NAV -------------------+
 |                                       |
-|  Your Website Is                      |
-|  Losing You Deals                     |
+|  Clients Judge You                    |
+|  Before You Speak                     |
 |                                       |
-|  In high-stakes industries,           |
-|  first impressions close deals.       |
-|  We build websites that make          |
-|  the right one.                       |
+|  High-credibility industries          |
+|  need high-credibility websites.      |
+|  We build both.                       |
 |                                       |
 |  [ Book a Call ]                      |
 |  [ See Our Work ]                     |
-|                                       |
-|  Web Design · High-Stakes Industries  |
 |                                       |
 +──────────── border-t ─────────────────+
 |                                       |
@@ -98,10 +90,10 @@ No feature rows, no footer.
 ```
 
 ## Design Notes
-- **Left col** (`bg-pulse-950`): dark surface, `justify-between` — empty spacer top, copy+CTAs mid, monospace footnote bottom
+- **Left col** (`bg-pulse-950`): dark surface, `justify-center` — H1, subheadline, CTAs
 - **Right col** (`bg-white`): "By the Numbers" social proof panel — muted section label, 4 metric rows, label left / value+unit right, `border-b` row dividers
-- **60/40 split**: `grid-cols-[3fr_2fr]` at `lg`; stacks vertically below `lg` with `border-t` separator instead of `border-l`
-- **H1**: `text-4xl` → `sm:text-5xl` → `md:text-6xl` → `lg:text-7xl`, `tracking-tighter`, `max-w-[16ch]`
+- **50/50 split**: `grid-cols-2` at `lg`; stacks vertically below `lg` with `border-t` separator instead of `border-l`
+- **H1**: `font-serif` (Lora) `font-bold`, `text-4xl` → `sm:text-5xl` → `md:text-6xl` → `lg:text-7xl`, `tracking-tighter`, `max-w-[16ch]` — accent display usage per typography system
 - **CTAs**: `flex-wrap gap-4` — `Book a Call` copper fill (primary), `See Our Work` ghost with `border-pulse-700` (secondary)
 - **Nav**: full links hidden on mobile (`hidden md:flex`), replaced with `← Back` link
 - **Stats**: placeholder figures — replace with real data before launch
