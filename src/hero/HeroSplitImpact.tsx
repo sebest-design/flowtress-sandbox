@@ -25,35 +25,31 @@ export function HeroSplitImpact() {
           <div />
           <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-white mb-8 max-w-[16ch]">
-              Security That Doesn't Slow the Flow
+              Your Website Is Losing You Deals
             </h1>
             <p className="text-base text-pulse-300 leading-relaxed max-w-[46ch] mb-10">
-              Flowtress gives regulated industries the security posture of a defense contractor
-              with the deployment speed of a SaaS startup.
-              8 enterprise deployments live. Zero incidents.
+              In high-stakes industries, first impressions close deals.
+              We build websites that make the right one.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-copper-500 text-white px-10 py-4 font-bold text-sm rounded hover:bg-copper-400 transition-colors active:scale-[0.98]">
-                Request Access
+                Book a Call
               </button>
               <button className="bg-transparent border border-pulse-700 text-pulse-300 px-10 py-4 font-bold text-sm rounded hover:border-pulse-400 hover:text-white transition-colors">
-                View Demo
+                See Our Work
               </button>
             </div>
           </div>
-          <p className="text-[9px] font-mono text-pulse-700 uppercase tracking-widest">OKLCH System · AES-256 · SOC 2</p>
+          <p className="text-[9px] font-mono text-pulse-700 uppercase tracking-widest">Web Design · High-Stakes Industries</p>
         </div>
         {/* Live system status panel */}
         <div className="bg-white border-t lg:border-t-0 border-l-0 lg:border-l border-slate-200 px-6 sm:px-8 py-10 sm:py-12 flex flex-col justify-center gap-6">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="size-1.5 rounded-full bg-copper-500 motion-safe:animate-pulse" aria-hidden="true" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">Live System Status</span>
-          </div>
+          <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-2">By the Numbers</span>
           {[
-            { label: "Active pipelines", value: "8", unit: "live" },
-            { label: "Threat detections", value: "0", unit: "incidents" },
-            { label: "Uptime", value: "100%", unit: "30 days" },
-            { label: "Avg response", value: "184ms", unit: "p99" },
+            { label: "Clients served", value: "12", unit: "projects" },
+            { label: "Industries", value: "4", unit: "verticals" },
+            { label: "Avg. time to launch", value: "3 wks", unit: "delivery" },
+            { label: "Client retention", value: "91%", unit: "return rate" },
           ].map((row) => (
             <div key={row.label} className="flex items-center justify-between py-4 border-b border-slate-100 last:border-0">
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{row.label}</span>

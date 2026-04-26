@@ -12,23 +12,21 @@ No feature rows, no footer.
 | FLOWTRESS          Features   Pricing   Docs   [ Request Access ]|                                  |
 +-------------------------------------- NAV ---|------ bg-white ---+----------------------------------+
 |                                              |                                                      |
-|                                              | · LIVE SYSTEM STATUS                                 |
+|                                              | BY THE NUMBERS                                       |
 |                                              |                                                      |
-|  Security That Doesn't                       | Active pipelines      8          live                |
-|  Slow the Flow                               | ─────────────────────────────────────────           |
-|                                              | Threat detections     0          incidents           |
-|  Flowtress gives regulated industries        | ─────────────────────────────────────────           |
-|  the security posture of a defense           | Uptime                100%        30 days           |
-|  contractor with the deployment speed        | ─────────────────────────────────────────           |
-|  of a SaaS startup. 8 enterprise             | Avg response          184ms       p99               |
-|  deployments live. Zero incidents.           |                                                      |
+|  Your Website Is                             | Clients served        12         projects            |
+|  Losing You Deals                            | ─────────────────────────────────────────           |
+|                                              | Industries            4          verticals           |
+|  In high-stakes industries, first            | ─────────────────────────────────────────           |
+|  impressions close deals. We build           | Avg. time to launch   3 wks      delivery           |
+|  websites that make the right one.           | ─────────────────────────────────────────           |
+|                                              | Client retention      91%        return rate         |
+|  [ Book a Call ]  [ See Our Work ]           |                                                      |
 |                                              |                                                      |
-|  [ Request Access ]  [ View Demo ]           |                                                      |
-|                                              |                                                      |
-|  OKLCH System · AES-256 · SOC 2              |                                                      |
+|  Web Design · High-Stakes Industries         |                                                      |
 |                                              |                                                      |
 +----------------------------------------------+------------------------------------------------------+
-  <────────────── 50% ───────────────>          <────────── 50% ──────────>
+  <────────────── 60% ───────────────>          <────────── 40% ──────────>
   bg-pulse-950 (dark)                           bg-white
 ```
 
@@ -38,27 +36,27 @@ No feature rows, no footer.
 | FLOWTRESS                                        [Menu]   |
 +-------------------------------- NAV ----------------------+
 |                                                           |
-|  Security That Doesn't Slow the Flow                      |
+|  Your Website Is Losing You Deals                         |
 |                                                           |
-|  Flowtress gives regulated industries the security        |
-|  posture of a defense contractor with the deployment      |
-|  speed of a SaaS startup. 8 deployments live.             |
+|  In high-stakes industries, first impressions             |
+|  close deals. We build websites that make                 |
+|  the right one.                                           |
 |                                                           |
-|  [ Request Access ]    [ View Demo ]                      |
+|  [ Book a Call ]    [ See Our Work ]                      |
 |                                                           |
-|  OKLCH System · AES-256 · SOC 2                           |
+|  Web Design · High-Stakes Industries                      |
 |                                                           |
 +───────────────────────────── border-t ────────────────────+
 |                                                           |
-|  · LIVE SYSTEM STATUS                                     |
+|  BY THE NUMBERS                                           |
 |                                                           |
-|  Active pipelines          8 live                         |
+|  Clients served            12 projects                    |
 |  ────────────────────────────────────                     |
-|  Threat detections         0 incidents                    |
+|  Industries                4 verticals                    |
 |  ────────────────────────────────────                     |
-|  Uptime                    100%  30 days                  |
+|  Avg. time to launch       3 wks delivery                 |
 |  ────────────────────────────────────                     |
-|  Avg response              184ms  p99                     |
+|  Client retention          91% return rate                |
 |                                                           |
 +-----------------------------------------------------------+
   bg-pulse-950 top / bg-white bottom
@@ -70,38 +68,40 @@ No feature rows, no footer.
 | FLOWTRESS                    [← Back] |
 +--------------- NAV -------------------+
 |                                       |
-|  Security That Doesn't                |
-|  Slow the Flow                        |
+|  Your Website Is                      |
+|  Losing You Deals                     |
 |                                       |
-|  Flowtress gives regulated            |
-|  industries the security of a         |
-|  defense contractor. 8 deployments.   |
+|  In high-stakes industries,           |
+|  first impressions close deals.       |
+|  We build websites that make          |
+|  the right one.                       |
 |                                       |
-|  [ Request Access ]                   |
-|  [ View Demo ]                        |
+|  [ Book a Call ]                      |
+|  [ See Our Work ]                     |
 |                                       |
-|  OKLCH System · AES-256 · SOC 2       |
+|  Web Design · High-Stakes Industries  |
 |                                       |
 +──────────── border-t ─────────────────+
 |                                       |
-|  · LIVE SYSTEM STATUS                 |
+|  BY THE NUMBERS                       |
 |                                       |
-|  Active pipelines    8 live           |
+|  Clients served    12 projects        |
 |  ─────────────────────────────        |
-|  Threat detections   0 incidents      |
+|  Industries        4 verticals        |
 |  ─────────────────────────────        |
-|  Uptime              100%  30 days    |
+|  Avg. to launch    3 wks delivery     |
 |  ─────────────────────────────        |
-|  Avg response        184ms  p99       |
+|  Client retention  91% return rate    |
 |                                       |
 +---------------------------------------+
   bg-pulse-950 top / bg-white bottom
 ```
 
 ## Design Notes
-- **Left col** (`bg-pulse-950`): dark surface, `justify-between` — tagline anchored top, CTA cluster mid, monospace footnote bottom
-- **Right col** (`bg-white`): live status panel — label left, value + unit right, `border-b` row dividers, copper pulse dot on status label
+- **Left col** (`bg-pulse-950`): dark surface, `justify-between` — empty spacer top, copy+CTAs mid, monospace footnote bottom
+- **Right col** (`bg-white`): "By the Numbers" social proof panel — muted section label, 4 metric rows, label left / value+unit right, `border-b` row dividers
 - **60/40 split**: `grid-cols-[3fr_2fr]` at `lg`; stacks vertically below `lg` with `border-t` separator instead of `border-l`
 - **H1**: `text-4xl` → `sm:text-5xl` → `md:text-6xl` → `lg:text-7xl`, `tracking-tighter`, `max-w-[16ch]`
-- **CTAs**: `flex-wrap gap-4` — primary copper fill, secondary ghost with `border-pulse-700`
+- **CTAs**: `flex-wrap gap-4` — `Book a Call` copper fill (primary), `See Our Work` ghost with `border-pulse-700` (secondary)
 - **Nav**: full links hidden on mobile (`hidden md:flex`), replaced with `← Back` link
+- **Stats**: placeholder figures — replace with real data before launch
