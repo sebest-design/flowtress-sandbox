@@ -5,6 +5,7 @@ import { TypographyPreview } from '../docs/typography/typography';
 import { FontCombinationsMatrix } from '../docs/typography/combinations';
 import { ColorSchemePreview } from '../docs/color-scheme/colors';
 import { ColorCombinationsMatrix } from '../docs/color-scheme/combinations';
+import { HeroSplitImpact } from './hero/HeroSplitImpact';
 
 // Setup React Query
 const queryClient = new QueryClient({
@@ -50,6 +51,14 @@ const indexRoute = createRoute({
       {/* Right: light navigation surface */}
       <div className="flex flex-col justify-center px-12 py-16 bg-slate-50 gap-6">
         <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Design matrices</p>
+        <Link
+          to="/hero"
+          className="group border border-slate-200 bg-white rounded-lg px-8 py-7 hover:border-copper-500 transition-colors"
+        >
+          <p className="text-[9px] font-bold uppercase tracking-widest text-copper-600 mb-2">Hero</p>
+          <p className="text-lg font-black text-pulse-950 tracking-tight group-hover:text-pulse-900 transition-colors">Split Impact Hero</p>
+          <p className="text-xs text-slate-400 mt-2">60/40 asymmetric split — live system status panel</p>
+        </Link>
         <Link
           to="/color-scheme"
           className="group border border-slate-200 bg-white rounded-lg px-8 py-7 hover:border-pulse-900 transition-colors"
@@ -99,13 +108,21 @@ const colorCombinationsRoute = createRoute({
   component: ColorCombinationsMatrix,
 });
 
+// Hero Route
+const heroRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/hero',
+  component: HeroSplitImpact,
+});
+
 // Create Route Tree
 const routeTree = rootRoute.addChildren([
-  indexRoute, 
-  typographyRoute, 
+  indexRoute,
+  heroRoute,
+  typographyRoute,
   combinationsRoute,
   colorSchemeRoute,
-  colorCombinationsRoute
+  colorCombinationsRoute,
 ]);
 
 // Create Router
